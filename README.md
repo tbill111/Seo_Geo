@@ -100,7 +100,7 @@ rồi mở `http://localhost:8080`.
 
 ### 2. Kiểm tra tốc độ & UX
 
-- Chạy [PageSpeed Insights](https://pagesight.web.dev/) hoặc Lighthouse (DevTools → Lighthouse)
+- Chạy [PageSpeed Insights](https://pagespeed.web.dev/) hoặc Lighthouse (DevTools → Lighthouse)
   cho cả Mobile và Desktop — mục tiêu Performance ≥ 90 vì trang không dùng thư viện ngoài.
 
 ### 3. Xác nhận crawler AI được phép truy cập
