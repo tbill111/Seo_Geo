@@ -9,17 +9,24 @@ dễ dàng đọc hiểu, trích xuất và đề xuất nội dung.
 
 ```
 Web/
-├── index.html        # Toàn bộ trang (bài viết, FAQ, bảng so sánh, JSON-LD)
-├── css/
-│   └── style.css      # CSS thuần, mobile-first, không phụ thuộc thư viện ngoài
-├── js/
-│   └── main.js         # JS thuần tối giản: progress bar, back-to-top, active TOC
-├── robots.txt          # Cho phép crawler AI (GPTBot, PerplexityBot, ClaudeBot, Google-Extended...)
-├── sitemap.xml          # Sitemap khai báo URL trang
+├── .github/
+│   └── workflows/
+│       └── deploy-pages.yml   # Tự động deploy lên GitHub Pages khi push nhánh main
+├── google3a9501200e4587f8.html # File xác minh quyền sở hữu domain trên Google Search Console
+├── index.html                  # Toàn bộ trang (bài viết, FAQ, bảng so sánh, JSON-LD)
+├── styles.css                  # CSS thuần, mobile-first, không phụ thuộc thư viện ngoài
+├── script.js                   # JS thuần tối giản: progress bar, back-to-top, active TOC
+├── robots.txt                  # Cho phép crawler AI (GPTBot, PerplexityBot, ClaudeBot, Google-Extended...)
+├── sitemap.xml                 # Sitemap khai báo URL trang
 └── README.md
 ```
 
 Không có framework, không có bước build — chỉ cần mở `index.html` hoặc deploy thẳng thư mục.
+
+> **Lưu ý về `google3a9501200e4587f8.html`:** đây là file xác minh quyền sở hữu domain
+> qua phương thức "HTML file" của Google Search Console. Nếu bạn xác minh một domain
+> khác, hãy thay bằng file mà Search Console cấp riêng cho domain đó (tên file và nội
+> dung bên trong đều phải khớp với domain thật).
 
 ## Checklist đã triển khai
 
@@ -34,6 +41,20 @@ Không có framework, không có bước build — chỉ cần mở `index.html`
 5. **Testing** — hướng dẫn kiểm thử AI Search bên dưới.
 
 ## Triển khai (Deploy)
+
+### GitHub Pages (tự động qua Actions)
+
+Repo đã có sẵn workflow `.github/workflows/deploy-pages.yml`:
+
+1. Vào **Settings → Pages** của repo GitHub → mục "Build and deployment" →
+   chọn Source = **GitHub Actions**.
+2. Push (hoặc merge) vào nhánh `main` — workflow sẽ tự chạy và deploy toàn bộ
+   thư mục gốc lên GitHub Pages.
+3. URL công khai sẽ có dạng `https://tbill111.github.io/Seo_Geo/`. Sau khi có URL
+   thật, cập nhật lại các chỗ dùng `https://your-domain.example/` trong `index.html`,
+   `robots.txt`, `sitemap.xml` rồi commit lại.
+4. Nếu domain xác minh trên Google Search Console khác với URL trên, hãy thay file
+   `google3a9501200e4587f8.html` bằng file xác minh đúng domain đó.
 
 ### Vercel
 
