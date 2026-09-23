@@ -1,0 +1,45 @@
+User-agent: *
+Allow: /
+
+# Trình thu thập dữ liệu của các công cụ tìm kiếm AI (Generative Engines)
+# Cho phép tường minh để tối ưu hóa GEO (Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://your-domain.example/sitemap.xml
