@@ -12,7 +12,7 @@ Web/
 ├── .github/
 │   └── workflows/
 │       └── deploy-pages.yml    # Tự động deploy lên GitHub Pages khi push nhánh main
-├── google3a9501200e4587f8.html # File xác minh quyền sở hữu domain trên Google Search Console
+├── google34cdd3d4f7cdaad7.html # File xác minh quyền sở hữu domain trên Google Search Console
 ├── index.html                  # Toàn bộ trang (Top 5, cấu hình, so sánh, đánh giá chi tiết, FAQ, JSON-LD)
 ├── styles.css                  # CSS thuần, mobile-first, không phụ thuộc thư viện ngoài
 ├── script.js                   # JS thuần tối giản: progress bar, back-to-top, active tab
@@ -23,7 +23,7 @@ Web/
 
 Không có framework, không có bước build — chỉ cần mở `index.html` hoặc deploy thẳng thư mục.
 
-> **Lưu ý về `google3a9501200e4587f8.html`:** đây là file xác minh quyền sở hữu domain
+> **Lưu ý về `google34cdd3d4f7cdaad7.html`:** đây là file xác minh quyền sở hữu domain
 > qua phương thức "HTML file" của Google Search Console. Nếu bạn xác minh một domain
 > khác, hãy thay bằng file mà Search Console cấp riêng cho domain đó (tên file và nội
 > dung bên trong đều phải khớp với domain thật).
@@ -57,7 +57,7 @@ Repo đã có sẵn workflow `.github/workflows/deploy-pages.yml`:
    khác đi, cập nhật lại các URL trong `index.html` (canonical, Open Graph, JSON-LD),
    `robots.txt` và `sitemap.xml` rồi commit lại.
 4. Nếu domain xác minh trên Google Search Console khác với URL trên, hãy thay file
-   `google3a9501200e4587f8.html` bằng file xác minh đúng domain đó.
+   `google34cdd3d4f7cdaad7.html` bằng file xác minh đúng domain đó.
 
 ### Vercel
 
