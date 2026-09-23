@@ -1,4 +1,4 @@
-/* TechInsight VN — minimal progressive-enhancement JS (no dependencies) */
+/* LapDev Guide — minimal progressive-enhancement JS (no dependencies) */
 (function () {
   "use strict";
 
@@ -49,23 +49,23 @@
   updateProgress();
   updateBackToTop();
 
-  /* Highlight the active table-of-contents link while scrolling */
-  var tocLinks = document.querySelectorAll(".toc a[href^='#']");
-  var sections = Array.prototype.map.call(tocLinks, function (link) {
+  /* Highlight the active tab-bar link while scrolling */
+  var tabLinks = document.querySelectorAll(".tab-bar a[href^='#']");
+  var sections = Array.prototype.map.call(tabLinks, function (link) {
     return document.querySelector(link.getAttribute("href"));
   });
 
-  if ("IntersectionObserver" in window && tocLinks.length) {
+  if ("IntersectionObserver" in window && tabLinks.length) {
     var observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           var index = sections.indexOf(entry.target);
           if (index === -1) return;
           if (entry.isIntersecting) {
-            tocLinks.forEach(function (l) {
-              l.style.color = "";
+            tabLinks.forEach(function (l) {
+              l.classList.remove("active");
             });
-            tocLinks[index].style.color = "var(--color-primary)";
+            tabLinks[index].classList.add("active");
           }
         });
       },

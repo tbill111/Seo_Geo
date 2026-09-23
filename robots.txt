@@ -42,4 +42,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://your-domain.example/sitemap.xml
+Sitemap: https://tbill111.github.io/Seo_Geo/sitemap.xml
