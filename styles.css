@@ -1,5 +1,5 @@
 /* =========================================================
-   LapDev Guide — GEO-optimized product-comparison stylesheet
+   PhoneWise VN — GEO-optimized product-comparison stylesheet
    Mobile-first, dependency-free, semantic-first CSS.
    ========================================================= */
 
@@ -429,7 +429,7 @@ code {
 
 @media (min-width: 1020px) {
   .product-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

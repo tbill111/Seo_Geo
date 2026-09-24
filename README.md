@@ -1,9 +1,9 @@
-# Top 5 Laptop Lập Trình Cho Sinh Viên CNTT — Landing Page tối ưu GEO
+# Top 4 Điện Thoại Đáng Mua Nhất 2026 — Landing Page tối ưu GEO
 
 Landing page dạng blog đánh giá/so sánh sản phẩm (HTML/CSS/JS thuần, không framework)
-với chủ đề **"Top 5 Laptop Lập Trình Cho Sinh Viên CNTT (15–30 Triệu) Đáng Mua Nhất 2026"**,
-được tối ưu để các công cụ tìm kiếm AI (Perplexity, Google Gemini, Bing AI, ChatGPT Search)
-dễ dàng đọc hiểu, trích xuất và đề xuất nội dung.
+với chủ đề **"Top 4 Điện Thoại Đáng Mua Nhất 2026 (8–34 Triệu)"**, được tối ưu để các
+công cụ tìm kiếm AI (Perplexity, Google Gemini, Bing AI, ChatGPT Search) dễ dàng đọc
+hiểu, trích xuất và đề xuất nội dung.
 
 ## Cấu trúc thư mục
 
@@ -13,7 +13,7 @@ Web/
 │   └── workflows/
 │       └── deploy-pages.yml    # Tự động deploy lên GitHub Pages khi push nhánh main
 ├── google34cdd3d4f7cdaad7.html # File xác minh quyền sở hữu domain trên Google Search Console
-├── index.html                  # Toàn bộ trang (Top 5, cấu hình, so sánh, đánh giá chi tiết, FAQ, JSON-LD)
+├── index.html                  # Toàn bộ trang (Top 4, cấu hình, so sánh, đánh giá chi tiết, FAQ, JSON-LD)
 ├── styles.css                  # CSS thuần, mobile-first, không phụ thuộc thư viện ngoài
 ├── script.js                   # JS thuần tối giản: progress bar, back-to-top, active tab
 ├── robots.txt                  # Cho phép crawler AI (GPTBot, PerplexityBot, ClaudeBot, Google-Extended...)
@@ -24,61 +24,47 @@ Web/
 Không có framework, không có bước build — chỉ cần mở `index.html` hoặc deploy thẳng thư mục.
 
 > **Lưu ý về `google34cdd3d4f7cdaad7.html`:** đây là file xác minh quyền sở hữu domain
-> qua phương thức "HTML file" của Google Search Console. Nếu bạn xác minh một domain
-> khác, hãy thay bằng file mà Search Console cấp riêng cho domain đó (tên file và nội
-> dung bên trong đều phải khớp với domain thật).
+> qua phương thức "HTML file" của Google Search Console, đã xác minh thành công cho
+> `https://tbill111.github.io/Seo_Geo/`. **Không xoá file này** — Google yêu cầu giữ
+> lại để duy trì trạng thái xác minh. Nếu đổi sang domain khác, thay bằng file mà
+> Search Console cấp riêng cho domain đó.
 
 ## Checklist đã triển khai
 
-1. **Từ khóa & FAQ** — H1/H2 nhúng từ khóa mục tiêu ("laptop lập trình cho sinh viên",
-   "laptop CNTT giá rẻ", "laptop chạy Docker"...); 6 câu hỏi FAQ viết theo ngôn ngữ tự
-   nhiên người dùng hay hỏi AI (ví dụ: "Laptop bao nhiêu RAM là đủ cho sinh viên CNTT?").
+1. **Từ khóa & FAQ** — H1/H2 nhúng từ khóa mục tiêu ("điện thoại đáng mua 2026",
+   "iPhone 17", "điện thoại chơi game", "điện thoại camera đẹp"...); 6 câu hỏi FAQ
+   viết theo ngôn ngữ tự nhiên người dùng hay hỏi AI (ví dụ: "Điện thoại bao nhiêu
+   RAM là đủ dùng mượt lâu dài?").
 2. **Chất lượng nội dung & định dạng** — bullet points trong từng thẻ sản phẩm, 2 bảng
-   (cấu hình cần có + so sánh chi tiết 5 mẫu), phần "Nguồn tham khảo" ở cuối trang.
+   (cấu hình cần chú ý + so sánh chi tiết 4 mẫu), phần "Nguồn tham khảo" ở cuối trang.
 3. **Schema Markup (JSON-LD)** — `WebSite`, `Organization`, `Person`, `WebPage`,
-   `BreadcrumbList`, `Article`, `ItemList` (5 `Product` xếp hạng), `FAQPage` trong
-   `<head>`, nhúng dạng `@graph`.
+   `BreadcrumbList`, `Article`, `ItemList` (4 `Product` xếp hạng, mỗi sản phẩm có
+   `offers` + `review` để qua Rich Results Test không lỗi), `FAQPage` trong `<head>`,
+   nhúng dạng `@graph`.
 4. **Hiệu suất & UX** — Semantic HTML, CSS/JS tối giản không phụ thuộc ngoài, responsive
-   mobile-first (tab điều hướng cuộn ngang trên mobile, lưới sản phẩm co giãn), dark mode
-   tự động theo hệ thống.
-5. **Testing** — hướng dẫn kiểm thử AI Search bên dưới.
+   mobile-first (tab điều hướng cuộn ngang trên mobile, lưới 4 sản phẩm co giãn), dark
+   mode tự động theo hệ thống.
+5. **Testing** — hướng dẫn kiểm thử Schema + AI Search bên dưới.
 
 ## Triển khai (Deploy)
 
-### GitHub Pages (tự động qua Actions)
+### GitHub Pages (tự động qua Actions) — đang dùng cho property hiện tại
 
-Repo đã có sẵn workflow `.github/workflows/deploy-pages.yml`:
+Repo đã có sẵn workflow `.github/workflows/deploy-pages.yml`, tự deploy khi push vào
+nhánh `main`. URL công khai: `https://tbill111.github.io/Seo_Geo/` — property này đã
+được xác minh trong Google Search Console.
 
-1. Vào **Settings → Pages** của repo GitHub → mục "Build and deployment" →
-   chọn Source = **GitHub Actions**.
-2. Push (hoặc merge) vào nhánh `main` — workflow sẽ tự chạy và deploy toàn bộ
-   thư mục gốc lên GitHub Pages.
-3. URL công khai sẽ có dạng `https://tbill111.github.io/Seo_Geo/`. Nếu domain thật
-   khác đi, cập nhật lại các URL trong `index.html` (canonical, Open Graph, JSON-LD),
-   `robots.txt` và `sitemap.xml` rồi commit lại.
-4. Nếu domain xác minh trên Google Search Console khác với URL trên, hãy thay file
-   `google34cdd3d4f7cdaad7.html` bằng file xác minh đúng domain đó.
+Nếu domain thật khác đi, cập nhật lại các URL trong `index.html` (canonical, Open
+Graph, JSON-LD), `robots.txt` và `sitemap.xml`, đồng thời thay file xác minh Google
+cho đúng domain mới rồi commit lại.
 
-### Vercel
+### Vercel / Netlify
 
-1. Đăng nhập [vercel.com](https://vercel.com), chọn **Add New → Project**.
-2. Import repository GitHub này (`tbill111/Seo_Geo`, nhánh chứa mã nguồn).
-3. Vercel tự nhận đây là static site (không cần Build Command / Output Directory —
-   để trống hoặc chọn "Other").
-4. Bấm **Deploy**. Sau khi xong, thay các URL `https://tbill111.github.io/Seo_Geo/`
-   trong `index.html`, `robots.txt`, `sitemap.xml` bằng domain thật (ví dụ
-   `https://lapdev-guide.vercel.app`) rồi deploy lại.
-
-### Netlify
-
-1. Đăng nhập [netlify.com](https://netlify.com) → **Add new site → Import an existing project**.
-2. Chọn repo GitHub, nhánh tương ứng.
-3. Build command: để trống. Publish directory: `/` (thư mục gốc).
-4. Deploy, sau đó cập nhật lại URL thật như hướng dẫn ở phần Vercel.
+Có thể import trực tiếp repo GitHub này (`tbill111/Seo_Geo`) vào Vercel hoặc Netlify —
+không cần Build Command (site tĩnh). Sau khi deploy, nhớ cập nhật lại URL thật trong
+`index.html`, `robots.txt`, `sitemap.xml` nếu domain khác với GitHub Pages.
 
 ### Chạy thử cục bộ
-
-Không bắt buộc server, nhưng để tránh lỗi CORS khi test JS, có thể chạy:
 
 ```bash
 npx serve .
@@ -88,15 +74,16 @@ python -m http.server 8080
 
 rồi mở `http://localhost:8080`.
 
-## Hướng dẫn kiểm tra khả năng hiển thị trên AI Search
+## Hướng dẫn kiểm tra Schema và khả năng hiển thị trên AI Search
 
 ### 1. Kiểm tra Schema Markup hợp lệ
 
-- Dán URL trang (sau khi deploy) vào
-  [Google Rich Results Test](https://search.google.com/test/rich-results) —
-  xác nhận `Article` và `FAQPage` được nhận diện không lỗi.
-- Dán vào [Schema.org Validator](https://validator.schema.org/) để kiểm tra toàn bộ `@graph`
-  (bao gồm cả `ItemList`/`Product` của 5 mẫu laptop).
+- Dán URL trang vào [Google Rich Results Test](https://search.google.com/test/rich-results)
+  — xác nhận `Article`, `FAQPage` và 4 `Product` (trong `ItemList`) không có lỗi
+  nghiêm trọng. Mỗi `Product` đã có `offers` (giá) và `review` (đánh giá biên tập) để
+  đáp ứng yêu cầu tối thiểu của Google; `aggregateRating` cố tình không thêm vì trang
+  không có dữ liệu đánh giá khách hàng thật — thêm số liệu giả sẽ là review giả mạo.
+- Dán vào [Schema.org Validator](https://validator.schema.org/) để kiểm tra toàn bộ `@graph`.
 
 ### 2. Kiểm tra tốc độ & UX
 
@@ -105,10 +92,10 @@ rồi mở `http://localhost:8080`.
 
 ### 3. Xác nhận crawler AI được phép truy cập
 
-- Mở `https://<domain>/robots.txt` — đảm bảo `GPTBot`, `PerplexityBot`, `ClaudeBot`,
-  `Google-Extended`, `bingbot` đều có `Allow: /`.
-- Có thể dùng công cụ "URL Inspection" trong Google Search Console để xác nhận Googlebot
-  crawl được trang (điều kiện để xuất hiện trong AI Overviews).
+- Mở `https://tbill111.github.io/Seo_Geo/robots.txt` — đảm bảo `GPTBot`, `PerplexityBot`,
+  `ClaudeBot`, `Google-Extended`, `bingbot` đều có `Allow: /`.
+- Trong Google Search Console, vào **Sơ đồ trang web** để chắc chắn `sitemap.xml` đã
+  được nộp, sau đó dùng **Kiểm tra URL → Yêu cầu lập chỉ mục** để đẩy nhanh việc index.
 
 ### 4. Kiểm tra thực tế trên các công cụ AI Search
 
@@ -117,32 +104,30 @@ trực tiếp trên từng công cụ để xem trang có được trích dẫn 
 
 **Trên Perplexity ([perplexity.ai](https://www.perplexity.ai)):**
 ```
-Laptop nào tốt nhất cho sinh viên CNTT trong tầm giá 15-30 triệu?
+Điện thoại nào đáng mua nhất năm 2026 trong tầm giá 8-34 triệu?
 ```
 ```
-Laptop bao nhiêu RAM là đủ để học lập trình?
+Điện thoại bao nhiêu RAM là đủ dùng mượt lâu dài?
 ```
 
 **Trên Google Gemini / AI Overviews:**
 ```
-So sánh MacBook Air M2 và laptop Windows cho sinh viên lập trình
+So sánh iPhone 17 và Samsung Galaxy S25 Ultra
 ```
 Kiểm tra phần "Nguồn" (Sources) bên dưới câu trả lời AI Overviews xem trang có được liệt kê không.
 
 **Trên Bing AI / Copilot ([bing.com/chat](https://www.bing.com/chat)):**
 ```
-Laptop nào chạy tốt Docker và Machine Learning cho sinh viên?
+Điện thoại nào chơi game mượt nhất trong tầm giá dưới 30 triệu?
 ```
 
 **Mẹo "ép" AI crawl trang nhanh hơn:**
 - Dán trực tiếp URL trang vào khung chat của Perplexity hoặc Bing Copilot kèm câu hỏi,
-  ví dụ: `Hãy tóm tắt nội dung tại https://<domain> và cho biết laptop nào tốt nhất
-  cho sinh viên CNTT?` — việc này khiến bot crawl/đọc trang ngay tại thời điểm hỏi,
-  không cần chờ index định kỳ.
+  ví dụ: `Hãy tóm tắt nội dung tại https://tbill111.github.io/Seo_Geo/ và cho biết
+  điện thoại nào đáng mua nhất?` — việc này khiến bot crawl/đọc trang ngay tại thời
+  điểm hỏi, không cần chờ index định kỳ.
 - Submit URL thủ công qua **Google Search Console → URL Inspection → Request Indexing**
   để đẩy nhanh việc Googlebot crawl, gián tiếp giúp AI Overviews cập nhật sớm hơn.
-- Theo dõi log server (nếu có) để xác nhận các user-agent `GPTBot`, `PerplexityBot`,
-  `ClaudeBot` đã từng truy cập trang.
 
 ### 5. Ghi chú về nội dung mẫu
 

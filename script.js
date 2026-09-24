@@ -1,4 +1,4 @@
-/* LapDev Guide — minimal progressive-enhancement JS (no dependencies) */
+/* PhoneWise VN — minimal progressive-enhancement JS (no dependencies) */
 (function () {
   "use strict";
 
